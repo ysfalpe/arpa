@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosyal Medya Dijital Klon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sosyal Medya Dijital Klon</h1>
+            <p>Sosyal medya profillerinden dijital klon oluşturun</p>
+        </header>
+
+        <main>
+            <section id="clone-creator">
+                <h2>Klon Oluştur</h2>
+                <form id="profile-form">
+                    <div class="form-group">
+                        <label for="profile-url">Sosyal Medya Profil URL'si:</label>
+                        <input type="url" id="profile-url" name="url" required
+                               placeholder="https://twitter.com/kullaniciadi">
+                    </div>
+                    <button type="submit">Klon Oluştur</button>
+                </form>
+                <div id="creation-status" class="status-message"></div>
+            </section>
+
+            <section id="clone-interaction" class="hidden">
+                <h2>Klonunuz ile Sohbet Edin</h2>
+                <div id="chat-container">
+                    <div id="chat-messages"></div>
+                    <form id="chat-form">
+                        <input type="text" id="question" name="question" 
+                               placeholder="Bir soru sorun..." required>
+                        <button type="submit">Gönder</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Bu uygulama yapay zeka teknolojilerini kullanarak sosyal medya profillerinden 
+               dijital klon oluşturur. Yalnızca eğitim ve eğlence amaçlıdır.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
